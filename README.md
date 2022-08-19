@@ -1,6 +1,6 @@
 # Agenda
 
-1. Hoja de vida en markdown: 
+### 1. Hoja de vida en markdown: 
 
 ### Hoja de vida 
 --------------------------------
@@ -34,6 +34,18 @@ son la responsabilidad, honestidad y lealtadad*.
  :email: E-mail: zharickdonado848@gmail.com
  
 :telephone: Telefono: 3242828122
+
+### Dia 12/08/2022
+
+### Programacion general 
+
+Sub sena
+
+nom = "Luis"
+num = "10"
+nom = "Maria"
+
+end Sena
 
 
 
