@@ -47,7 +47,7 @@ nom = "Maria"
 
 end Sena
 
-###19/08/2022
+### 19/08/2022
 
 Sub Suma()
  a = Int(InputBox("digitar numero para la variable a"))
