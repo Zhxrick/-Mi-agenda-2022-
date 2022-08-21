@@ -35,7 +35,7 @@ son la responsabilidad, honestidad y lealtadad*.
  
 :telephone: Telefono: 3242828122
 
-### Dia 12/08/2022
+### FECHA: 12/08/2022
 
 ### Programacion general 
 
@@ -47,7 +47,7 @@ nom = "Maria"
 
 end Sena
 
-### 19/08/2022
+### FECHA: 19/08/2022
 
 Sub Suma()
  a = Int(InputBox("digitar numero para la variable a"))
