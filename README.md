@@ -23,8 +23,27 @@ Sub Suma()
 End Sub
 
 
+### Descuento numero de noche
 
-
+definir noche, precio, pago como entero
+	definir descuento como real
+	
+	precio<- 100
+	escribir "Digite el numero de noches"
+	leer noches
+	
+	total <- precio * noches
+	
+	si noches > 3 entonces 
+		descuento <- total*.05
+		
+		 escribir "Su pago total es: ", total - descuento 
+	sino 
+		
+		escribir "su pago total sin descuento es: ", total
+		
+		
+	FinSi
 
 
 
