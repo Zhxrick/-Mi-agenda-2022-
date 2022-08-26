@@ -3,9 +3,9 @@
 
 Sub sena
 
-nom = "Luis"
+nom = "camilo"
 num = "10"
-nom = "Maria"
+nom = "zharick"
 
 end Sena
 
