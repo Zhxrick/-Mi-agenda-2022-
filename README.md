@@ -45,5 +45,43 @@ definir noche, precio, pago como entero
 		
 	FinSi
 
+### Sacar promedio de notas / aprobado no aprobado 
+Algoritmo sin_titulo
+	
+	definir alumno como caracter 
+	definir examenparcial, examenfinal,promediopracticas como real
+	definir final Como Real
+	
+	escribir "Digite el nombre del alumno" 
+	leer alumno 
+	
+	Escribir "Las notas se calificaran de 1 - 10" 
+	
+	Escribir "Digite la nota del examen parcial"
+	leer examenparcial
+	Escribir "Digite la nota del examen final"
+	leer examenfinal
+	Escribir "Digite la nota del promedio de practicas"
+	leer promediopracticas
+	
+	final <- (examenparcial+promediopracticas+(examenfinal*2))/3
+	
+	si final > 6 entonces 
+		escribir "alumno aprobado: ", alumno 
+		escribir "su promedio es: ", final 
+	sino 
+		
+		escribir alumno, " alumno no aprobado"
+		escribir "su promedio es: ", final 
+		
+	FinSi
+	
+FinAlgoritmo
+
+	
+	
+	
+	
+
 
 
