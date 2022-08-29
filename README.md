@@ -169,71 +169,7 @@ End Sub
 End Sub
 
 	
-### Hacer un formulario
 
-Private Sub CommandButton1_Click()
-
-End Sub
-
-Private Sub btnguardar_Click()
-
-Dim llenar As Long
- Sheets("DATOS").Activate
-
- llenar = WorksheetFunction.CountA(Range("A:A")) + 1
-  
-   Cells(llenar, 1).Value = Textnombre.Value
-   Cells(llenar, 2).Value = Textapellido.Value
-   Cells(llenar, 4).Value = Combciudad.Value
-   Cells(llenar, 5).Value = Combedad.Value
-   
- If Combciudad.Value = True Then
- 
-   Cells(llenar, 3).Value = "Femenino"
-
- Else
-   
-   Cells(llenar, 3).Value = "Masculino"
-   
- End If
- 
-   
-End Sub
-
-Private Sub OptionButton1_Click()
-
-End Sub
-
-Private Sub Frame1_Click()
-
-End Sub
-
-Private Sub Label3_Click()
-
-End Sub
-
-Private Sub UserForm_Initialize()
-
- With Combciudad
- 
-  .AddItem "Barranquilla"
-  .AddItem "Cartagena"
-  .AddItem "Valledupar"
-  .AddItem "Santa Marta"
-  .AddItem "Bucaramanga"
- 
- End With
-  
-  With Combedad
-   
-   .AddItem "18"
-   .AddItem "17"
-   .AddItem "16"
-   .AddItem "15"
-   
-  End With
-
-End Sub
 
 ### Celdas 
 
