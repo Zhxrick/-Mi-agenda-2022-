@@ -235,7 +235,18 @@ Private Sub UserForm_Initialize()
 
 End Sub
 
-	
+### Celdas 
+
+
+	Sub guardar()
+    fila = datos.Cells(2, 7)
+    datos.Cells(fila, 1) = formulario.Cells(8, 4)
+    datos.Cells(fila, 2) = formulario.Cells(10, 4)
+    datos.Cells(fila, 3) = formulario.Cells(12, 4)
+    datos.Cells(fila, 4) = formulario.Cells(14, 4)
+    MsgBox "Datos guardados"
+    datos.Cells(2, 7) = fila + 1
+End Sub
 	
 
 
