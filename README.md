@@ -183,7 +183,20 @@ End Sub
     MsgBox "Datos guardados"
     datos.Cells(2, 7) = fila + 1
 End Sub
-	
 
+
+### Registro de nombre en celdas excel
+	
+Sub sena()
+        
+        For n = 2 To 16
+            nombre = InputBox("Digite su nombre: " & n)
+            datos.Cells(n, 1) = nombre
+        
+            
+        Next n
+        
+
+End Sub
 
 
