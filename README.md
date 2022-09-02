@@ -269,4 +269,15 @@ End Sub
 		
                 FinAlgoritmo
 
+### Funciones de cadenas de caracteres 
+
+		Sub inicio()
+	    For a = 2 To 21
+	    nom = Hoja1.Cells(a, 1)
+	    ultimo = Len(nom) - 1
+	    Hoja1.Cells(a, 2) = Mid(nom, ultimo, 2)
+
+	    Next a
+	End Sub
+
 
