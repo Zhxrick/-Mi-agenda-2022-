@@ -231,4 +231,42 @@ Sub eventoescolar()
         
 End Sub
 
+### Recaudosb de fondos en PSeint 
+                Algoritmo sin_titulo
+		
+		definir no_abono Como Real
+		definir abono Como entero 
+		definir abonomasdiezmil como real 
+		definir recaudado como real 
+		definir promedio como real 
+		definir cantidadestudiantes Como Entero
+		
+		numestudiantes <- 2 
+		
+		para d<-1 hasta numestudiantes Hacer
+			escribir "Desea aportar para la recolecta (si o no)"
+			leer estudiante 
+			si estudiante = "si" entonces 
+				abono <- abono + 1 
+				escribir "que cantidad va a aportar?"
+				leer total 
+				recaudado <- recaudado + total 
+				si total > 10000 entonces 
+					abonomasdiezmil <- abonomasdiezmil + 1 							
+				FinSi
+			FinSi		
+			si estudiante = "no" entonces 
+				no_abono <- no_abono + 1	
+			FinSi	
+		FinPara
+		promedio <- recaudado / abono
+		
+		escribir "El total de recaudado por los estudiantes es: ", recaudado 
+		escribir "El promedio recaudado por estudiante es: ", promedio 
+		escribir "El numero de estudiantes que aportaron es: ", abono 
+		escribir "El numero de estudiantes que no aportaron es: ", no_abono
+		escribir "Los estudiantes que aportaron una cantidad superior a 10,000 fueron: ", abonomasdiezmil
+		
+                FinAlgoritmo
+
 
