@@ -351,6 +351,93 @@ End Sub
 	  }
 
 	  }
+	 
+### REINO ANIMAL 
+
+	void main(){
+
+	  print ("EL REINO ANIMAL");
+	  print ("  ");
+
+	  Cocodrilo cocodrilo = new Cocodrilo();
+	  cocodrilo.nombre = "Cocodrilo";
+	  cocodrilo.alimentacion = "Carnivoro";
+	  cocodrilo.nacimiento = "Ovíparos";
+	  cocodrilo.habitat = "Mixto";
+
+	  print ("El nombre del animal es: ${cocodrilo.nombre}");
+	  print ("Su tipo de alimentación es: ${cocodrilo.alimentacion}");
+	  print ("Su tipo de desarrollo embrionario es: ${cocodrilo.nacimiento}");
+	  print ("El habitat donde se encuentran es: ${cocodrilo.habitat}");
+	  print ("  ");
+
+	  Elefante elefante = new Elefante();
+	  elefante.nombre = "Elefante";
+	  elefante.alimentacion = "Herviboro";
+	  elefante.nacimiento = "Vivíparo";
+	  elefante.habitat = "Terrestre";
+	  print ("  ");
+
+	  print ("El nombre del animal es: ${elefante.nombre}");
+	  print("Su tipo de alimentación es: ${elefante.alimentacion}");
+	  print("Su tipo de desarrollo embrionario es: ${elefante.nacimiento}");
+	  print("El habitat donde se encuentra es: ${cocodrilo.habitat}");
+
+	  Cerdo cerdo = new Cerdo();
+	  cerdo.nombre = "cerdo";
+	  cerdo.alimentacion =  "Omnivoro";
+	  cerdo.nacimiento = "Vivíparo";
+	  cerdo.habitat = "Terrestre";  
+	  print ("  ");
+
+	  print("El nombre del animal es: ${cerdo.nombre}");
+	  print("Su tipo de alimentación es: ${cerdo.alimentacion}");
+	  print("Su tipo de desarrollo embrionario es: ${cerdo.alimentacion}");
+	  print("El habitat donde se encuentra es: ${cerdo.habitat}");
+
+	  Tiburon tiburon = new Tiburon();
+	  tiburon.nombre = "Tiburon";
+	  tiburon.alimentacion = "Carnivoro";
+	  tiburon.nacimiento = "Vivíparo";
+	  tiburon.habitat = "Acuático";
+	  print ("  ");
+
+	  print("El nombre del animal es: ${tiburon.nombre}");
+	  print("Su tipo de alimentación es: ${tiburon.alimentacion}");
+	  print("Su tipo de desarollo embrionario es: ${tiburon.nacimiento}");
+	  print("El habitat donde se encuentra es: ${tiburon.habitat}");
+
+	}
+
+	   class Animal{
+	     String? nombre;}
+	   class Carnivoro extends Animal{
+	      String? alimentacion;}
+	   class Herviboro extends Animal{
+	      String? alimentacion;}
+	   class Omnivoro extends Animal{
+	     String? alimentacion;}
+	   class Cocodrilo extends Carnivoro{
+	     String? nacimiento;
+	     String? habitat;}
+	  class Elefante extends Herviboro{
+	    String? nacimiento;
+	    String? habitat;}
+	  class Cerdo extends Omnivoro{
+	    String? nacimiento;
+	    String? habitat;}
+	  class Tiburon extends Carnivoro{
+	    String? nacimiento;
+	    String? habitat;}   
+
+
+
+ 
+ 
+  
+  
+ 
+
 
 
 
