@@ -443,31 +443,31 @@ void main(){
 	    String? habitat;}   
 
 ### EMPRESAS 
-  void main (){
-  
-  Empresa empresa1 = Empresa(pais: "colombia", numero: 1043660098, oficina: "C&N");
-  Empresa empresa2 = Empresa(pais: "Peru", numero: 123456789, oficina: "Promigas");
-  Empresa empresa3 = Empresa(pais: "USA", numero: 987654321, oficina: "4life");
-}
+	  void main (){
 
-  class Empresa{
-     String? pais, oficina; 
-     int? numero; 
+	  Empresa empresa1 = Empresa(pais: "colombia", numero: 1043660098, oficina: "C&N");
+	  Empresa empresa2 = Empresa(pais: "Peru", numero: 123456789, oficina: "Promigas");
+	  Empresa empresa3 = Empresa(pais: "USA", numero: 987654321, oficina: "4life");
+	}
 
-  Empresa({this.pais, this.oficina, this.numero});
+	  class Empresa{
+	     String? pais, oficina; 
+	     int? numero; 
 
-  String? generarcodigo(){
-      String? paisCod = pais!.substring(0,3);
-      int? cntoffice = oficina!.length;
-      int? office = cntoffice - 3;
-      String? ofic = oficina!.substring(cntoffice,office);
-      String? numstr = numero.toString();
-      String? num = numstr.substring(0,3);
-      String? codig = '$paisCod$ofic$num';
-      return codig; 
-    
-  }
-  }
+	  Empresa({this.pais, this.oficina, this.numero});
+
+	  String? generarcodigo(){
+	      String? paisCod = pais!.substring(0,3);
+	      int? cntoffice = oficina!.length;
+	      int? office = cntoffice - 3;
+	      String? ofic = oficina!.substring(cntoffice,office);
+	      String? numstr = numero.toString();
+	      String? num = numstr.substring(0,3);
+	      String? codig = '$paisCod$ofic$num';
+	      return codig; 
+
+	  }
+	  }
  
   
   
