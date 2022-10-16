@@ -479,7 +479,7 @@ void main(){
 	  int? poffice = cantoff! - 3; 
 	  String? oficinaCod = oficina!.substring(poffice,cantoff);
 	  String? cantnum = numero.toString();
-	  String? nume = cantnum.substring(0,3);
+	  String? nume = cantnum.substring(0,4);
 	  String? codigo = '$paisCod,$oficinaCod$nume';
 	  return codigo;  
 	    }
@@ -499,7 +499,7 @@ void main(){
 	""");
 	}
 	}
-### Ejericio (length/substring/ToString)
+### Ejericicio (length/substring/ToString)
 	    void main (){
 
 	  Inscripcion inscripcion1 = Inscripcion (nombre: 'Juan', apellido: 'Gallego', telefono: 3024550070);
