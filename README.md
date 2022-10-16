@@ -443,36 +443,59 @@ void main(){
 	    String? habitat;}   
 
 ### EMPRESAS 
-	  void main (){
+		void main(){
+	    Empresa empresa1 = new Empresa(pais:'Argentina', numero:1043660098, oficina:'Advantice');
+	    Empresa empresa2 = new Empresa(pais:'Colombia', numero: 3242828122, oficina:'Lenovo');
 
-	  Empresa empresa1 = Empresa(pais: "colombia", numero: 1043660098, oficina: "C&N");
-	  Empresa empresa2 = Empresa(pais: "Peru", numero: 123456789, oficina: "Promigas");
-	  Empresa empresa3 = Empresa(pais: "USA", numero: 987654321, oficina: "4life");
+
+	   print("""
+	    Usuarios de Empresas
+	    1° Empresa:
+
+	      Pais: ${empresa1.pais}.
+	      Identificacion: ${empresa1.numero}.
+	      Oficina: ${empresa1.oficina}.
+	      Codigo: ${empresa1.generarCodigo()}
+	  """);
+
+	     print("""
+	    2° Empresa:
+	      Pais: ${empresa2.pais}.
+	      Identificacion: ${empresa2.numero}.
+	      Oficina: ${empresa2.oficina}
+
+	      codigo: ${empresa2.generarCodigo()}
+	  """);}
+
+
+	 class Empresa{
+	    String? pais, oficina;
+	    int? numero;
+	 Empresa({this.pais, this.numero, this.oficina});
+
+	  String? generarCodigo(){
+	  String? paisCod = pais!.substring(0,3);
+	  int? cantoff = oficina?.length; 
+	  int? poffice = cantoff! - 3; 
+	  String? oficinaCod = oficina!.substring(poffice,cantoff);
+	  String? cantnum = numero.toString();
+	  String? nume = cantnum.substring(0,3);
+	  String? codigo = '$paisCod,$oficinaCod$nume';
+	  return codigo;  
+	    }
+
+	 void cantCaracteres(){
+	   int? crtpais = pais!.length; 
+	   int? cantoff= oficina!.length;
+	   String? crtnumero = numero.toString();
+	   int? numerocrt = crtnumero.length; 
+
+	   print("""
+	  ----------------------------------------
+	    caracteres de oficina son: $cantoff.
+	    caracteres de pais: $crtpais.
+	    caracteres de numero: $numerocrt.
+	   ----------------------------------------
+	""");
 	}
-
-	  class Empresa{
-	     String? pais, oficina; 
-	     int? numero; 
-
-	  Empresa({this.pais, this.oficina, this.numero});
-
-	  String? generarcodigo(){
-	      String? paisCod = pais!.substring(0,3);
-	      int? cntoffice = oficina!.length;
-	      int? office = cntoffice - 3;
-	      String? ofic = oficina!.substring(cntoffice,office);
-	      String? numstr = numero.toString();
-	      String? num = numstr.substring(0,3);
-	      String? codig = '$paisCod$ofic$num';
-	      return codig; 
-
-	  }
-	  }
- 
-  
-  
- 
-
-
-
-
+	}
