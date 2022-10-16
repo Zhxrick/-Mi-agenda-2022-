@@ -499,3 +499,67 @@ void main(){
 	""");
 	}
 	}
+### Ejericio (length/substring/ToString)
+	    void main (){
+
+	  Inscripcion inscripcion1 = Inscripcion (nombre: 'Juan', apellido: 'Gallego', telefono: 3024550070);
+	  Inscripcion inscripcion2 = Inscripcion (nombre: 'Zharick', apellido: 'Donado', telefono: 3242828122);
+
+	  print("""
+	  1° Usuario:
+	  El nombre del usuario es: ${inscripcion1.nombre}
+	  El apellido es: ${inscripcion1.apellido}
+	  el telefono es: ${inscripcion1.telefono}
+
+	  Su codigo generado es: ${inscripcion1.generarCodigo()}
+
+
+	  """);
+	  inscripcion1.cantCaracteres();
+
+
+	   print("""
+	  2° Usuario:
+	  El nombre del usuario es: ${inscripcion2.nombre}
+	  El apellido es: ${inscripcion2.apellido}
+	  el telefono es: ${inscripcion2.telefono}
+
+	  Su codigo generado es: ${inscripcion2.generarCodigo()}
+
+	  """);
+	 inscripcion2.cantCaracteres();
+	}
+
+	class Inscripcion{
+	  String? nombre;
+	  String? apellido;
+	  int? telefono;
+	Inscripcion({this.nombre, this.apellido, this.telefono});
+
+	String generarCodigo(){
+	  String? nombreCod = nombre!.substring(0,3);
+	  String? apellidoCod = apellido!.substring(0,3);
+	  String? numeroCod = telefono!.toString();
+	  String? telefonoCod = numeroCod.substring(0,3);
+	  String? codigo = '$nombreCod,$apellidoCod,$telefonoCod';
+	  return codigo; 
+	}
+	void cantCaracteres(){
+	  int? cantnombre = nombre!.length;
+	  int? cantapellido = apellido!.length;
+	  String? cantnumero = telefono!.toString();
+	  int? cantelefono = cantnumero.length; 
+
+	 print 
+	   ("""
+	   --------------------------------------
+	 La cantidad de caracteres en nombre es: $cantnombre
+	 La cantidad de caracteres en apellido es: $cantapellido
+	 La cantidad de caracteres en telefono es: $cantelefono
+	 ---------------------------------------
+	 """);
+
+	}
+
+	}
+
