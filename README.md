@@ -457,6 +457,8 @@ void main(){
 	      Oficina: ${empresa1.oficina}.
 	      Codigo: ${empresa1.generarCodigo()}
 	  """);
+              empresa1.cantCaracteres();
+  
 
 	     print("""
 	    2° Empresa:
@@ -465,7 +467,11 @@ void main(){
 	      Oficina: ${empresa2.oficina}
 
 	      codigo: ${empresa2.generarCodigo()}
-	  """);}
+	  """);
+	  
+	      
+	     empresa2.cantCaracteres();
+	  }
 
 
 	 class Empresa{
@@ -480,7 +486,7 @@ void main(){
 	  String? oficinaCod = oficina!.substring(poffice,cantoff);
 	  String? cantnum = numero.toString();
 	  String? nume = cantnum.substring(0,4);
-	  String? codigo = '$paisCod,$oficinaCod$nume';
+	  String? codigo = '$paisCod$oficinaCod$nume';
 	  return codigo;  
 	    }
 
