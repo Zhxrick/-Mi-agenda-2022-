@@ -688,3 +688,39 @@ void main(){
 	""");
 	}
 	}
+	
+## ejercicio de herencia 
+	   main(){
+
+	  Chofer chofer = Chofer();
+	  chofer.id = 12345;
+	  chofer.name = 'Andy';
+	  chofer.salario = 1100;
+	  chofer.vehiculoAsignado = 'Toyota Supra';
+	  chofer.calcularSalario();
+
+	  print("""
+	  el nombre del chofer es: ${chofer.name}
+	  el salario es: ${chofer.salario}
+	  el vehiculo asignado es: ${chofer.vehiculoAsignado}
+	  """);
+	}
+
+
+	class Empleado{
+	  int? id;
+	  String?  name;
+	  double? salario;
+
+	  void calcularSalario(){
+	    print('El salario de $name es $salario');
+	  }
+	}
+
+	// Hereda de Empleado
+	class Chofer extends Empleado{
+	  String? vehiculoAsignado;
+
+	}
+
+
