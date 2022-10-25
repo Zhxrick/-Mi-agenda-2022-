@@ -725,43 +725,36 @@ void main(){
 
 ### ejercicio clase abstracta 
 	void main(){
-	  Vaca animal1 = Vaca();
-	  Gato animal2 = Gato();
-	  Perro animal3 = Perro();
+	  Vaca vaca1 = Vaca();
+	  Gato gato2 = Gato(); 
 
-	  animal3.nombre = 'Dartañan';
+	  Perro perro3 = Perro();
+	  perro3.nombre = "Astro";
 
-	  print("EL SONIDO DE LOS ANIMALES");
-	  animal1.emitirSonido();
-	  animal2.emitirSonido();
-	  animal3.emitirSonido();
-	  print("""
-	  ICM
-	  El ICM del perro ${animal3.nombre} es:
-	  """);
-	  Carnivoro.imc(12,9);
+	  print("Sonido de los animales"); 
+		vaca1.emitirSonido();
+		gato2.emitirSonido();
+		perro3.emitirSonido();
+
+	  print("El IMC (indice de masa corporal) del perro ${perro3.nombre} es de:");
+	  Carnivoro.imc(37,6); 
 	}
-
 	abstract class Animal{
-	  void emitirSonido();
+	  void emitirSonido(); 
 	}
-
 	class Carnivoro{
 	  String? nombre;
-
-	  static void imc(a, b) => print(a * b);
-	} 
-
+	  static void imc (a, b) => print (a * b);
+	}
 	class Vaca implements Animal{
-	  void emitirSonido() => print('muuuuuu');
+	    @override 
+	  void emitirSonido() => print ("La vaca hace MUUUUUUUUU"); 
 	}
-
 	class Gato implements Animal{
-	  void emitirSonido() => print('miau miau');
+	    @override
+	   void emitirSonido() => print("El gato hace MIAUUUUUU");
 	}
-
 	class Perro extends Carnivoro implements Animal{
-	  void emitirSonido() => print('wau wau');
+	  @override
+	  void emitirSonido() => print("El perro hace GUAU GUAU"); 
 	}
-
-
