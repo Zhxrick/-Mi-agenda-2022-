@@ -758,3 +758,38 @@ void main(){
 	  @override
 	  void emitirSonido() => print("El perro hace GUAU GUAU"); 
 	}
+	
+	
+### Accesorio 
+
+void main(){
+   
+ Car car = Car (); 
+ Accesorio accesorio1 = Accesorio ("Polarizado"); 
+ Accesorio accesorio2 = Accesorio ("Rines");
+ Accesorio accesorio3 = Accesorio ("Luces"); 
+ car.placa = "ZYD1923";
+
+ car.setAccesorio(accesorio1);
+ car.setAccesorio(accesorio2); 
+ car.setAccesorio(accesorio3); 
+  
+  
+}
+class Car{
+ String? placa;
+  
+  List<Accesorio> _accesorio = []; 
+  void setAccesorio(Accesorio accesorio){
+    _accesorio.add(accesorio); 
+  } 
+  List<Accesorio> getAccesorio(){
+    return _accesorio; 
+  }
+  }
+
+class Accesorio{
+  String? nombre; 
+  Accesorio(this.nombre); 
+}
+
