@@ -762,34 +762,34 @@ void main(){
 	
 ### Accesorio 
 
-void main(){
-   
- Car car = Car (); 
- Accesorio accesorio1 = Accesorio ("Polarizado"); 
- Accesorio accesorio2 = Accesorio ("Rines");
- Accesorio accesorio3 = Accesorio ("Luces"); 
- car.placa = "ZYD1923";
+	void main(){
 
- car.setAccesorio(accesorio1);
- car.setAccesorio(accesorio2); 
- car.setAccesorio(accesorio3); 
-  
-  
-}
-class Car{
- String? placa;
-  
-  List<Accesorio> _accesorio = []; 
-  void setAccesorio(Accesorio accesorio){
-    _accesorio.add(accesorio); 
-  } 
-  List<Accesorio> getAccesorio(){
-    return _accesorio; 
-  }
-  }
+	 Car car = Car (); 
+	 Accesorio accesorio1 = Accesorio ("Polarizado"); 
+	 Accesorio accesorio2 = Accesorio ("Rines");
+	 Accesorio accesorio3 = Accesorio ("Luces"); 
+	 car.placa = "ZYD1923";
 
-class Accesorio{
-  String? nombre; 
-  Accesorio(this.nombre); 
-}
+	 car.setAccesorio(accesorio1);
+	 car.setAccesorio(accesorio2); 
+	 car.setAccesorio(accesorio3); 
+
+
+	}
+	class Car{
+	 String? placa;
+
+	  List<Accesorio> _accesorio = []; 
+	  void setAccesorio(Accesorio accesorio){
+	    _accesorio.add(accesorio); 
+	  } 
+	  List<Accesorio> getAccesorio(){
+	    return _accesorio; 
+	  }
+	  }
+
+	class Accesorio{
+	  String? nombre; 
+	  Accesorio(this.nombre); 
+	}
 
