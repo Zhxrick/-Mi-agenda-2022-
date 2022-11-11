@@ -886,5 +886,79 @@ void main(){
 	  );
 	  }
 	}
+	
+### main 
+	import 'dart';
+	import 'package:flutter/material.dart';
+	import 'models/user.dart';
+	import 'widgets/template.dart' as http;
 
+
+	void main(){
+	     runApp(MyApp()); 
+	}
+
+	class MyApp extends StatelessWidget {
+	  bool get snap 
+
+	  @override
+	  Widget build(BuildContext context) {
+	    return MaterialApp(
+	      title: 'My application',
+	      home: Scaffold(appBar: AppBar(title: Text('Aplicacion ventana')),
+	      body: FutureBuilder<User>(
+		future: getUser(),
+		builder: ((context, snapshot) {
+		  if (snap)
+
+		}),
+	      )
+
+
+
+
+	    Future <User> getUser() async{
+	      final url = Uri.https('reqres.in', '/api/users/3');
+	      final response = await http.get(url);
+		    return User(response.body); 
+
+
+	    }
+	  }
+	}
+
+### user dart
+	import 'dart:convert' as convert;
+
+	class User{
+	  String? nombre; 
+	  String? avatar;
+	  String? email; 
+
+	  User(String json){
+	    final JsonResponse = convert.jsonDecode(json); 
+	    nombre = JsonResponse["data"]["firts_name"]; 
+	    avatar = JsonResponse["data"]["avatar"];
+	    email = JsonResponse["data"]["email"]; 
+
+	  }
+
+	}
+### template
+	   import 'dart:convert' as convert;
+
+	class User{
+	  String? nombre; 
+	  String? avatar;
+	  String? email; 
+
+	  User(String json){
+	    final JsonResponse = convert.jsonDecode(json); 
+	    nombre = JsonResponse["data"]["firts_name"]; 
+	    avatar = JsonResponse["data"]["avatar"];
+	    email = JsonResponse["data"]["email"]; 
+
+	  }
+
+	}
 
