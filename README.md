@@ -981,3 +981,162 @@ void main(){
 	    );
 	  }
 	}
+	
+### Nuevo add
+
+	  main: 
+	      import 'package:flutter/material.dart';
+	import 'package:sena/widgets/menulateral.dart';
+	import 'models/user.dart';
+	import 'package:http/http.dart' as http;
+	import 'widgets/template.dart';
+	void main() => runApp(Sena());
+
+	class Sena extends StatelessWidget {
+	  @override
+	  Widget build(BuildContext context) {
+	    return MaterialApp(
+	      title: 'My application',
+	      home: Scaffold(
+		  appBar: AppBar(title: const Text('Chats de inicio'), 
+		  Drawer: MenuLateral(),
+		  leading: IconButton(icon: const Icon(Icons.menu), onPressed: () {},),
+		  actions: <Widget>[
+		  IconButton(
+		    icon: Icon(Icons.find_in_page_rounded),
+		    onPressed: () {},),
+		    IconButton(
+		    icon: Icon(Icons.settings),
+		    onPressed: () {},
+		    ),
+		   IconButton(
+		    icon: Icon(Icons.settings),
+		    onPressed: () {},
+		    ),
+		  ],
+
+		  backgroundColor: Colors.green),
+		  backgroundColor: Colors.grey[300],
+		  body: FutureBuilder<List<User>>(
+		    future: getData(),
+		    builder: (context, snapshot) {
+		      if (snapshot.connectionState == ConnectionState.done) {
+			List<User> users = snapshot.data!;
+			return ListView.builder(
+			    itemCount: users.length,
+			    itemBuilder: (BuildContext context, index) {
+			      final user = users[index];
+			      return ItemData(user: user);
+			    });
+		      }
+		      return const Center(child: CircularProgressIndicator());
+		    },
+		  )),
+	    );
+	  }
+
+	  Future<List<User>> getData() async {
+	    final url = Uri.https('reqres.in', '/api/users');
+	    final response = await http.get(url);
+	    return userFromJson(response.body);
+	  }
+	  }
+	  
+### menu lateral 
+	   import 'package:flutter/material.dart';
+
+	class MenuLateral extends StatelessWidget{
+
+	  @override
+	  Widget build(BuildContext context) {
+	    return new Drawer(
+	      child: ListView(
+		children: <Widget>[
+		  new UserAccountsDrawerHeader(
+		      accountName: Text("CODEA APP"),
+		      accountEmail: Text("informes@gmail.com"),
+		    decoration: BoxDecoration(
+		      image: DecorationImage(
+			  image: NetworkImage("https://dominio.com/imagen/recurso.jpg"),
+			fit: BoxFit.cover
+		      )
+		    ),
+		  ),
+		  Ink(
+		    color: Colors.indigo,
+		    child: new ListTile(
+		      title: Text("MENU 1", style: TextStyle(color: Colors.white),),
+		    ),
+		  ),
+		  new ListTile(
+		    title: Text("MENU 2"),
+		    onTap: (){},
+		  ),
+		  new ListTile(
+		    title: Text("MENU 3"),
+		  ),
+		  new ListTile(
+		    title: Text("MENU 4"),
+		  ) ],
+	      ) ,
+	    );
+	  }
+	}
+
+### template 
+
+	   import 'package:flutter/material.dart';
+	import 'package:sena/models/user.dart';
+
+	class ItemData extends StatelessWidget {
+	  final User user;
+	  const ItemData({
+	    Key? key,
+	    required this.user,
+	  }) : super(key: key);
+
+	  @override
+	  Widget build(BuildContext context) {
+	    return Column(
+	      children: [
+		ListTile(
+		  title: Text('${user.firstName!} ${user.lastName!}'),
+		  subtitle: Text(user.correoElectrnico!),
+		  leading: CircleAvatar(backgroundImage: NetworkImage(user.avatar!),),
+		  trailing: const Icon(Icons.arrow_forward_ios,color: Colors.blue,
+	),
+		),
+		Divider(),
+	      ],
+	    );
+	  }
+	}
+	
+user:
+	   import 'dart:convert';
+	import 'package:sena/main.dart';
+
+	List<User> userFromJson(String str) => List<User>.from(json.decode(str)['data'].map((x) => User.fromJson(x)));
+
+	class User {
+	  User({
+	    this.correoElectrnico,
+	    this.firstName,
+	    this.lastName,
+	    this.avatar,
+	  });
+
+	  String? correoElectrnico;
+	  String? firstName;
+	  String? lastName;
+	  String? avatar;
+
+	  factory User.fromJson(Map<String, dynamic> json) => User(
+		correoElectrnico: json["email"],
+		firstName: json["first_name"],
+		lastName: json["last_name"],
+		avatar: json["avatar"],
+	      );
+	}
+
+
