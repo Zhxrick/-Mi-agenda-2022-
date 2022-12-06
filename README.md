@@ -1332,4 +1332,67 @@ void main(){
 	    margin: 0;
 	}
 
+### Background color/ custom paint
+
+main 
+
+	import 'package:flutter/material.dart';
+	import 'package:paint/widgets/background.dart';
+
+	void main() {
+	  runApp(MyApp());
+	}
+
+	class MyApp extends StatelessWidget {
+	  @override
+	  Widget build(BuildContext context) {
+	    return MaterialApp(
+	      debugShowCheckedModeBanner: false,
+	      title: 'Custom Paint',
+	      home: Scaffold(
+		body: Background1(),
+	      ),
+	    );
+	  }
+	}
+
+
+backgroundcolor: 
+
+
+	import 'package:flutter/material.dart';
+	import 'package:paint/main.dart';
+
+	class Background1 extends StatelessWidget {
+	  @override
+	  Widget build(BuildContext context) {
+	    return Container(
+	      height: double.infinity,
+	      width: double.infinity,
+	      child: CustomPaint(
+		painter: LogoPainter(),
+	      ),
+	    );
+	  }
+	}
+
+	class LogoPainter extends CustomPainter {
+	  @override
+	  void paint(Canvas canvas, Size size) {
+	    Paint paint = Paint();
+	    paint.color = Color.fromARGB(255, 83, 8, 168);
+	    Path path = new Path();
+	    path.lineTo(0, size.height - size.height / 5);
+	    path.conicTo(size.width / 2.2, size.height, size.width,
+		size.height - size.height / 6, 15);
+	    path.lineTo(size.width, 0);
+	    path.close();
+	    canvas.drawPath(path, paint);
+	  }
+
+	  @override
+	  bool shouldRepaint(covariant CustomPainter oldDelegate) {
+	    return true;
+	  }
+	}
 
