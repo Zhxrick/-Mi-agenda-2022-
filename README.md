@@ -1457,3 +1457,48 @@ backgroundcolor:
 	footer{
 	    border: 1px solid black;
 	}
+
+
+#### Javascripy
+   html
+   
+   <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navegation</title>
+</head>
+<body>
+    <script src="codigo.js"></script>
+       <br>
+       <header id="zz"></header>
+ 
+    <input type="text" id="entrada">
+    <a href="javascript:prueba()">click</a>
+    
+</body>
+
+</html>
+
+ ###js
+	    document.write('<center><h1>Hola</center>');
+	var img = document.createElement('img'); 
+	img.src = 'https://tse3.mm.bing.net/th?id=OIP.NECcJ9oQ56UUUacjdXLCxQHaEz&pid=Api&P=0'; 
+	img.width="500";
+	img.height="300";
+	img.style.display="block";
+	img.style.margin = "auto";
+	document.body.appendChild(img); 
+	document.write('Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.')
+
+
+	function prueba(){
+	    ent = document.getElementById("entrada");
+	    caja = document.getElementById("zz");
+	    caja.innerHTML = ent.value;
+	}
+
+
